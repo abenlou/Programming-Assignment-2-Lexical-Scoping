@@ -105,33 +105,36 @@ In order to complete this assignment, you must do the following:
 This assignment will be graded via peer assessment.
 
 
-makeCacheMatrix <- function( m = matrix() ) {
-    i <- NULL
-    set <- function( matrix ) {
+    makeCacheMatrix <- function( m = matrix() ) {
+        i <- NULL
+        set <- function( matrix ) {
             m <<- matrix
             i <<- NULL
     }
 
-    get <- function() {
-    	## Return the matrix
-    	m
+        get <- function() {
+    	
+    	    m
     }
 
-    setInverse <- function(inverse) {
-        i <<- inverse
+        setInverse <- function(inverse) {
+            i <<- inverse
     }
 
-    getInverse <- function() {
-        i
+        getInverse <- function() {
+            i
     }
 
-    list(set = set, get = get,
-         setInverse = setInverse,
-         getInverse = getInverse)
-}
+        list(set = set, get = get,
+             setInverse = setInverse,
+             getInverse = getInverse)
+    }
 
 
-cacheSolve <- function(x, ...) {
+
+
+
+    cacheSolve <- function(x, ...) {
     m <- x$getInverse()
 
     if( !is.null(m) ) {
@@ -146,4 +149,4 @@ cacheSolve <- function(x, ...) {
     x$setInverse(m)
 
     m
-}
+    }
