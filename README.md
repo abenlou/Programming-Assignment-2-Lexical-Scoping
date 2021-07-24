@@ -106,9 +106,7 @@ This assignment will be graded via peer assessment.
 
 
 makeCacheMatrix <- function( m = matrix() ) {
-
     i <- NULL
-
     set <- function( matrix ) {
             m <<- matrix
             i <<- NULL
@@ -134,7 +132,6 @@ makeCacheMatrix <- function( m = matrix() ) {
 
 
 cacheSolve <- function(x, ...) {
-
     m <- x$getInverse()
 
     if( !is.null(m) ) {
